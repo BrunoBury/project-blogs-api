@@ -1,4 +1,3 @@
-const { TIMESTAMP } = require("mysql2/lib/constants/types")
 
 module.exports = (sequelize, DataTypes) => {
     const User = sequelize.define('User', {
