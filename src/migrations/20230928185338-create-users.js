@@ -9,9 +9,10 @@ module.exports = {
           autoIncrement: true,
           allowNull: false
       },
-      display_name: {
+      displayName: {
           type: Sequelize.STRING,
-          allowNull: false
+          allowNull: false,
+          field:'display_name'
       },
       email: {
           type: Sequelize.STRING,

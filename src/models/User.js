@@ -10,7 +10,7 @@ module.exports = (sequelize, DataTypes) => {
         displayName: {
             type: DataTypes.STRING,
             allowNull: false,
-            field:'display_Name'
+            field:'display_name'
         },
         email:{
             type: DataTypes.STRING,
@@ -27,6 +27,7 @@ module.exports = (sequelize, DataTypes) => {
         {
         timestamps: false,
         tableName: 'users',
+        underscored: true,
     });
 
     // console.log(User);
