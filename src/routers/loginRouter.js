@@ -1,12 +1,12 @@
 const express = require('express');
 
 const router = express.Router();
-const authController = require('../controllers/loginCont');
-const validateFieldsMiddleware = require('../middleware/validateFieldsMid');
+const authController = require('../controllers/loginControllers');
+const { validateFields } = require('../middleware/validateFieldsMid');
 
 router.post(
   '/login',
-  validateFieldsMiddleware,
+  validateFields,
   authController.handleLogin,
 );
 

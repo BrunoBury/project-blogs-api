@@ -7,7 +7,7 @@ module.exports = (sequelize, DataTypes) => {
             autoIncrement: true,
             allowNull: false
         },
-        display_name: {
+        displayName: {
             type: DataTypes.STRING,
             allowNull: false
         },

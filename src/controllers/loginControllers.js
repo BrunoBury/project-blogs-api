@@ -1,11 +1,5 @@
-const jwt = require('jsonwebtoken');
 const { User } = require('../models');
-
-const generateToken = (user) => jwt.sign(
-  { id: user.id, email: user.email },
-  process.env.JWT_SECRET,
-  { expiresIn: '7d', algorithm: 'HS256' },
-);
+const generateToken = require('../utils/tokenGenerate');
 
 const findUserByEmail = async (email) => {
   const user = await User.findOne({ where: { email } });
