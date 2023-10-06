@@ -3,7 +3,8 @@ const express = require('express');
 const router = express.Router();
 
 const { createUser } = require('../controllers/usersControllers');
-// const { authenticateToken } = require('../middleware/validadeToken');
+const { authenticateToken } = require('../middleware/validateToken');
+const { getAllUsers } = require('../controllers/getAllUsers');
 const { validateFields,
   validateDisplayName,
   validateEmail,
@@ -18,4 +19,9 @@ router.post(
   createUser,
 );
 
+router.get(
+  '/user',
+  authenticateToken,
+  getAllUsers,
+);
 module.exports = router;
