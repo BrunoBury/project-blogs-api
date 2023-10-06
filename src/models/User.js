@@ -30,6 +30,5 @@ module.exports = (sequelize, DataTypes) => {
         underscored: true,
     });
 
-    // console.log(User);
     return User;
 };
