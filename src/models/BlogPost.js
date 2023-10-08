@@ -4,24 +4,19 @@ module.exports = (sequelize, DataTypes) => {
             type: DataTypes.INTEGER,
             primaryKey: true,
             autoIncrement: true,
-            allowNull: false
         },
         title: DataTypes.STRING,
         content: DataTypes.STRING,
         userId: {
             type: DataTypes.INTEGER,
-            allowNull: false,
-            references: {
-                model: 'User',
-                key: 'id',
-            },
+            field: 'user_id',
         },
         published: DataTypes.DATE,
         updated: DataTypes.DATE,
     },
     {
         timestamps: false,
-        tableName: 'BlogPosts',
+        tableName: 'blog_posts',
         underscored: true,
     });
 

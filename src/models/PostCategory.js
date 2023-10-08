@@ -3,24 +3,16 @@ module.exports = (sequelize, DataTypes) => {
         postId: {
         type: DataTypes.INTEGER,
         primaryKey: true,
-        allowNull: false,
-        references: {
-            model: 'BlogPost',
-            key: 'id',
-        },
+        field: 'post_id',
         },
         categoryId: {
         type: DataTypes.INTEGER,
         primaryKey: true,
-        allowNull: false,
-        references: {
-            model: 'Category',
-            key: 'id',
-        },
+        field: 'category_id',
         },
     }, { 
         timestamps: false, 
-        tableName: 'PostsCategories',
+        tableName: 'posts_categories',
         underscored: true,
      });
     
